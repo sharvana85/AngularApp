@@ -16,15 +16,12 @@ cache:
     - '$HOME/.sonar/cache'
 
 
-#addons:
-#  sonarqube:true
-#   token:
-#      secure: "4b20bb10221113c1a88e1c119277a306589dd58d"
-
 addons:
-  sonarqube: true
-     token:
+  sonarqube:true
+   token:
       secure: "412291be08e6bac6f0e3013d6bd45851149fcacc"
+
+
 
 install:
 - mvn dependency:go-offline
