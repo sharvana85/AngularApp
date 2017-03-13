@@ -23,6 +23,9 @@ cache:
 
 addons:
   sonarqube: true
+     token:
+      secure: "412291be08e6bac6f0e3013d6bd45851149fcacc"
+
 install:
 - mvn dependency:go-offline
 script:
