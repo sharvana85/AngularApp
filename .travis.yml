@@ -5,10 +5,10 @@ sudo: false
 jdk:
   - oraclejdk8
 
-#script:
+script:
   # JaCoCo is used to have code coverage, the agent has to be activated
-  #- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
-#  - sonar-scanner
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+  - sonar-scanner
 
 cache:
   directories:
@@ -24,8 +24,8 @@ addons:
 
 install:
 - mvn dependency:go-offline
-script:
-- mvn verify site sonar:sonar -Dmaven.test.failure.ignore=true
+#script:
+#- mvn verify site sonar:sonar -Dmaven.test.failure.ignore=true
 
 env:
   global:
