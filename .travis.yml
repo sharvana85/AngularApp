@@ -24,8 +24,8 @@ addons:
 
 install:
 - mvn dependency:go-offline
-#script:
-#- mvn verify site sonar:sonar -Dmaven.test.failure.ignore=true
+script:
+- mvn verify site sonar:sonar -Dmaven.test.failure.ignore=true
 
 env:
   global:
@@ -33,7 +33,7 @@ env:
   - secure: "EscPf1qnbOCCdz0D4eCu3RCllN/DKBJ3rdY/R8fClS+M3aA4ijLcF/Tv8bRc/UoAceQBhkK2M7EmTC1kSPJ8oPvDnIHhvYfmtgbi1BL6MB5QMJaXFismv3Nj1f48L7g3x1vDNY0biH95a1+9iuz52W6GGHVrF3h97lQqlPGTPtLoCnIeN3BjPBq/mpZRWkvelB1jd5h8GqPNOAhrVzU4UdLRlACMVn+0w9kK7mJS8DHExXd0Ko1r3lrs6fhB67ZAkE9fOaTXj1kFpIlQUq63QrDNxQRyINTkhRQ+yHkIDzMgcmoHxkSVINEkYSZ+6xii3mXaVZF0LT517uEUjeoW21QBtZ3Net6acC9oc7UHk3i5kBQ852KLDfRw26hP+AXdd9OIeKbucLedzJp22j4/PVnmYUGH5oFo1xNySmlZTZpA4UoWMMr1eAxyCQAAoJLUp4eb2CH+A3uSB9XHZHlgq4xfPgz+Zt5nOM0ghRfQFEqqp0ZPMBqi3BFj2WBv9BF97c3OePn8HUNlfQADFT5pk0gQpU0sbdqAjdgFeoJysEhHgGKbWRmoDDpUwReCR+jhX2eAe0vV28mqJ4ot9p2kQERDD8aZLl1zp3c19qHNTajPbSRa/vUo9vLSCEV/AGuX1qaPqTDwYI68N+PW9hJ+QGDXYMQQbTSBQ4E6Eu89eVw=" 
   jdk: oraclejdk8
 language: java
-script: mvn clean install sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
+#script: mvn clean install sonar:sonar -Dsonar.host.url=https://sonarqube.com -Dsonar.login=$SONAR_TOKEN
 
 
 notifications:
